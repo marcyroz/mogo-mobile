@@ -2,8 +2,8 @@
   "name": "mogo-mobile",
   "version": "1.0.0",
   "scripts": {
-    "android": "expo start --android",
-    "ios": "expo start --ios",
+    "android": "expo run:android",
+    "ios": "expo run:ios",
     "start": "expo start",
     "prebuild": "expo prebuild",
     "lint": "eslint \"**/*.{js,jsx,ts,tsx}\" && prettier -c \"**/*.{js,jsx,ts,tsx,json}\"",
@@ -11,6 +11,7 @@
     "web": "expo start --web"
   },
   "dependencies": {
+    "@expo-google-fonts/nunito": "^0.4.2",
     "@expo/metro-runtime": "^6.1.2",
     "@react-navigation/native": "^7.1.18",
     "@rn-primitives/portal": "^1.3.0",
@@ -19,8 +20,10 @@
     "clsx": "^2.1.1",
     "expo": "^54.0.13",
     "expo-constants": "~18.0.9",
+    "expo-font": "^14.0.9",
     "expo-linking": "~8.0.8",
     "expo-router": "~6.0.13",
+    "expo-splash-screen": "^31.0.10",
     "expo-status-bar": "~3.0.8",
     "lucide-react-native": "^0.546.0",
     "nativewind": "latest",
@@ -31,6 +34,8 @@
     "react-native-reanimated": "~4.1.3",
     "react-native-safe-area-context": "~5.6.1",
     "react-native-screens": "~4.16.0",
+    "react-native-svg": "^15.14.0",
+    "react-native-svg-transformer": "^1.5.1",
     "react-native-web": "^0.21.2",
     "react-native-worklets": "0.5.1",
     "tailwind-merge": "^3.3.1",

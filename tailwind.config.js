@@ -4,14 +4,27 @@ const { hairlineWidth } = require('nativewind/theme');
 module.exports = {
   content: ['./src/**/*.{js,jsx,ts,tsx}'],
   presets: [require('nativewind/preset')],
+  darkMode: 'class',
   theme: {
     extend: {
+      fontWeight: {
+        normal: 400,
+        semibold: 600,
+        bold: 700,
+      },
+      fontFamily: {
+        sans: ['Nunito'],
+        'nunito-400': ['Nunito_400Regular'],
+        'nunito-600': ['Nunito_600SemiBold'],
+        'nunito-700': ['Nunito_700Bold'],
+      },
       colors: {
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',
         ring: 'hsl(var(--ring))',
         background: 'hsl(var(--background))',
         foreground: 'hsl(var(--foreground))',
+        link: 'hsl(var(--link))',
         primary: {
           DEFAULT: 'hsl(var(--primary))',
           foreground: 'hsl(var(--primary-foreground))',
