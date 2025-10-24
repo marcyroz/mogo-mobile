@@ -1,13 +1,18 @@
-import { NAV_THEME } from "@/lib/theme";
-import { Nunito_400Regular, Nunito_600SemiBold, Nunito_700Bold, useFonts } from "@expo-google-fonts/nunito";
-import { ThemeProvider } from "@react-navigation/native";
-import { PortalHost } from "@rn-primitives/portal";
+import { NAV_THEME } from '@/lib/theme';
+import {
+  Nunito_400Regular,
+  Nunito_600SemiBold,
+  Nunito_700Bold,
+  useFonts,
+} from '@expo-google-fonts/nunito';
+import { ThemeProvider } from '@react-navigation/native';
+import { PortalHost } from '@rn-primitives/portal';
 import { Stack } from 'expo-router';
-import * as SplashScreen from "expo-splash-screen";
+import * as SplashScreen from 'expo-splash-screen';
 import { StatusBar } from 'expo-status-bar';
-import { useEffect } from "react";
-import { useColorScheme, View } from "react-native";
-import "../styles/global.css";
+import { useEffect } from 'react';
+import { useColorScheme, View } from 'react-native';
+import '../styles/global.css';
 
 SplashScreen.preventAutoHideAsync();
 
@@ -33,7 +38,10 @@ export default function Layout() {
   return (
     <ThemeProvider value={NAV_THEME[colorScheme ?? 'light']}>
       <StatusBar style={colorScheme === 'dark' ? 'light' : 'dark'} />
-      <Stack screenOptions={{ headerShown: false }} />
+      <Stack screenOptions={{ headerShown: false }}>
+        <Stack.Screen name="(public)" />
+        <Stack.Screen name="(private)" />
+      </Stack>
       <PortalHost />
     </ThemeProvider>
   );
