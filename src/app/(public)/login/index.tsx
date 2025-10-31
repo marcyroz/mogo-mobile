@@ -5,11 +5,13 @@ import { Button } from '@/src/components/ui/button';
 import { Text } from '@/src/components/ui/text';
 import { View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import { Link } from 'expo-router';
+import { Link, useRouter } from 'expo-router';
 
 export default function Login() {
+  const router = useRouter();
+
   const handleEntrar = () => {
-    console.log('Receba a entrada');
+    router.replace('/(private)/home');
   };
   return (
     <SafeAreaView className="flex-1">
