@@ -1,28 +1,21 @@
 import GoogleSvg from '@/assets/google.svg';
-import { Input } from '@/src/components/ui/input';
 import { Button } from '@/src/components/ui/button';
+import { Input } from '@/src/components/ui/input';
 import { Text } from '@/src/components/ui/text';
-import { Pressable, View } from 'react-native';
 import { Link, useRouter } from 'expo-router';
-import { SafeAreaView } from 'react-native-safe-area-context';
 import React from 'react';
-import { ArrowLeft } from 'lucide-react-native';
+import { View } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 export default function Register() {
-    // Expo router e useRouter para navegação programática (navegação mais complexa)
   const router = useRouter();
 
   const handleContinuar = () => {
-    // Lógica para continuar o registro
-    console.log('Continuar registro');
+    router.push('/(public)/register/questionary');
   };
+
   return (
-    <SafeAreaView>
-      <View className="p-5">
-        <Pressable onPress={() => router.back()}>
-          <ArrowLeft size={24} />
-        </Pressable>
-      </View>
+    <SafeAreaView edges={['bottom']} className="flex-1">
       <View className="gap-3 p-5">
         <Text className="mt-8 text-3xl font-bold">Criar conta</Text>
         <View>
