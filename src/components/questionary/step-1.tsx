@@ -1,5 +1,4 @@
-import Mogo from '@/assets/mogo-1.svg';
-import { QuestionaryStepper } from "@/src/app/(public)/register/questionary";
+import Mogo from '@/assets/questionary/mogo-1.svg';
 import { Button } from "@/src/components/ui/button";
 import { Label } from "@/src/components/ui/label";
 import { RadioGroup, RadioGroupItem } from "@/src/components/ui/radio-group";
@@ -7,6 +6,7 @@ import { Select, SelectContent, SelectGroup, SelectItem, SelectTrigger, SelectVa
 import { Text } from "@/src/components/ui/text";
 import { useState } from "react";
 import { View } from "react-native";
+import { QuestionaryStepper } from "./stepper";
 
 const options = [
     { value: "visual", label: "Visual" },
