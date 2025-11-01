@@ -1,11 +1,11 @@
-import Mogo from "@/assets/mogo-2.svg";
-import { QuestionaryStepper } from "@/src/app/(public)/register/questionary";
+import Mogo from "@/assets/questionary/mogo-2.svg";
 import { Button } from "@/src/components/ui/button";
 import { Label } from "@/src/components/ui/label";
 import { Select, SelectContent, SelectGroup, SelectItem, SelectTrigger, SelectValue } from "@/src/components/ui/select";
 import { Text } from "@/src/components/ui/text";
 import { useState } from 'react';
 import { View } from 'react-native';
+import { QuestionaryStepper } from "./stepper";
 
 const options = [
     { value: "walk", label: "A pé" },

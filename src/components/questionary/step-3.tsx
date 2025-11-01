@@ -1,5 +1,4 @@
-import Mogo from '@/assets/mogo-3.svg';
-import { QuestionaryStepper } from "@/src/app/(public)/register/questionary";
+import Mogo from '@/assets/questionary/mogo-3.svg';
 import { Button } from "@/src/components/ui/button";
 import { Checkbox } from "@/src/components/ui/checkbox";
 import { Label } from "@/src/components/ui/label";
@@ -7,6 +6,7 @@ import { Text } from "@/src/components/ui/text";
 import { useState } from "react";
 import { View } from 'react-native';
 import { } from "react-native-safe-area-context";
+import { QuestionaryStepper } from "./stepper";
 
 const options = [
     { value: "tactile", label: "Pisos táteis" },
